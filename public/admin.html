@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Admin Login</title>
+</head>
+
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="coreAdmin.js"></script>
+<table ng-app="Admin">
+  <tr>
+    <th>Login</th>
+    <th>Register</th>
+  </tr>
+  <tr>
+    <td>
+      <div ng-controller="loginCtrl">
+      <p>Username : <input type="text" ng-model="username"></p>
+      <p>Password : <input type="text" ng-model="password"></p>
+      <input type="button" ng-click="submit()" value="login">
+      <p>{{ msg }}</p>
+    </div>
+  </td>
+
+    <td>
+      <div ng-controller="regCtrl">
+        <p>Username : <input type="text" ng-model="username"></p>
+        <p>Password : <input type="text" ng-model="password"></p>
+        <input type="button" ng-click="submit()" value="register">
+        <p>{{ msg }}</p>
+      </div>
+    </td>
+
+  </tr>
+</table>
+
+
+</body>
+
+</html>
